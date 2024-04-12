@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meu Site com Fundo Animado</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Faz com que o conteúdo ocupe toda a altura da tela */
+        overflow: hidden; /* Esconde barras de rolagem */
+    }
+    video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1; /* Coloca o vídeo atrás de todo o conteúdo */
+    }
+    .content {
+        z-index: 1; /* Garante que o conteúdo fique na frente do vídeo */
+    }
+    button {
+        position: absolute; /* Posiciona o botão */
+        bottom: 20px; /* Distância do botão até o rodapé */
+        left: 50%; /* Posiciona o botão no centro horizontalmente */
+        transform: translateX(-50%); /* Centraliza horizontalmente o botão */
+        font-size: 16px;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<video autoplay muted loop>
+    <source src="background.mp4" type="video/mp4">
+    Seu navegador não suporta a tag de vídeo.
+</video>
+<div class="content">
+    <!-- Aqui vai o resto do seu conteúdo HTML -->
+    <h1>Meu Site com Fundo Animado</h1>
+    <button onclick="playMusic()">Reproduzir Música</button>
+</div>
+
+<script>
+function playMusic() {
+    var audio = new Audio('musica.mp3');
+    audio.play();
+}
+</script>
+</body>
+</html>
