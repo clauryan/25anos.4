@@ -3,19 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Meu Site com Fundo Animado</title>
 <style>
     body {
         margin: 0;
         padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh; /* Faz com que o conteúdo ocupe toda a altura da tela */
         overflow: hidden; /* Esconde barras de rolagem */
+        position: relative; /* Define a posição relativa para o corpo */
     }
     video {
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         width: 100%;
@@ -43,7 +41,7 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
-        position: fixed;
+        position: absolute;
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
@@ -57,7 +55,7 @@
 </video>
 <div class="content">
     <!-- Aqui vai o resto do seu conteúdo HTML -->
-    <h1></h1>
+    <h1>Meu Site com Fundo Animado</h1>
 </div>
 <button onclick="playMusic()">Reproduzir Música</button>
 
