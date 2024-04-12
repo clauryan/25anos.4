@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title></title>
+<title>Meu Site com Fundo Animado</title>
 <style>
     body {
         margin: 0;
@@ -43,6 +43,10 @@
         border: none;
         border-radius: 5px;
         cursor: pointer;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 </style>
 </head>
@@ -54,8 +58,8 @@
 <div class="content">
     <!-- Aqui vai o resto do seu conteúdo HTML -->
     <h1>Meu Site com Fundo Animado</h1>
-    <button onclick="playMusic()">Reproduzir Música</button>
 </div>
+<button onclick="playMusic()">Reproduzir Música</button>
 
 <script>
 function playMusic() {
